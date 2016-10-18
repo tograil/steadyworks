@@ -14,47 +14,10 @@
 
 </head>
 <body ng-app="app">
-	<div class="content-top">
-		<!-- Popup -->
-		<div id="fade"></div>
-		<div id="popup">
-			<div class="success">Message sent!</div>
-			<div class="title">get a free quote</div>
-			<form action="javascript:void(0);" method="post" onsubmit='send(this)'>
-				<input type="text" name="name" id="name" placeholder="Name">
-				<input type="text" name="company" id="company" placeholder="Company">
-				<input type="text" name="email" id="email" placeholder="E-mail">
-				<textarea name="message" id="message" placeholder="Message"></textarea>
-				<input type="submit" value="get">
-			</form>
-		</div>
-		<!-- ***** -->
+	<div class="content-top" id="top">
+		<div ng-include="'views/generic/popup.html'"></div>
 
-		<div id="header">
-			<div class="logo">
-				<img src="img/header-logo.png" alt="Steady Works logo">
-			</div>
-
-			<div class="menu">
-				<div class="responsive"><span>Steady Works </span><img src="img/logo.png" alt="Steady Works logo"></div>
-
-				<ul>
-					<li class="about"><div>about</div></li>
-					<li class="services"><div>services</div></li>
-					<li class="technologies"><div>technologies</div></li>
-					<li class="why"><div>why we</div></li>
-					<li class="contact"><div>contact</div></li>
-				</ul>
-
-				<div class="menu-button">
-					<div>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-			</div>			
-		</div>
+		<div id="header" ng-include="'views/generic/header.html'"></div>
 
 		<div class="slogan">
 			<div>
@@ -184,7 +147,9 @@
 
 	<script src="js/lib/jquery/dist/jquery.min.js"></script>
 	<script src="js/lib/angular/angular.min.js"></script>
+	<script src="js/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="js/app/app.js"></script>
+	<script src="js/app/controllers/header.js"></script>
 	<script src="js/script.js"></script>
 
 </body>
