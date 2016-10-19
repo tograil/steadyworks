@@ -15,7 +15,8 @@
 </head>
 <body ng-app="app">
 	<div class="content-top" id="top">
-		<div ng-include="'views/generic/popup.html'"></div>
+		<div id="fade"></div>
+		<popup-window></popup-window>
 
 		<div id="header" ng-include="'views/generic/header.html'"></div>
 
@@ -149,6 +150,7 @@
 	<script src="js/lib/angular/angular.min.js"></script>
 	<script src="js/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="js/app/app.js"></script>
+	<script src="js/app/directives/popup/popup.js"></script>
 	<script src="js/app/controllers/header.js"></script>
 	<script src="js/script.js"></script>
 
